@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+         @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+        html, body {
+            font-family: 'Game Played', sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url("images/Nintendo/back.gif");
+            background-repeat: repeat;
+        }
+    
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 18px;
+        }
+
+    
+        .logo {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        /* Content Styles */
+        .content {
+            min-height: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #3300ff;
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #0011ff, #8401ff, #ff0077);
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration:dashed;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+            border:darkblue;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #3001ff;
+        }
+
+    
+        .console::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            z-index: -1;
+            transition: transform 0.3s ease-in-out;
+            transform: translate(0, 0);
+        }
+
+        .console:hover::before {
+            transform: translate(-5px, -5px);
+        }
+
+        /* List Styles */
+        .neonText {
+            position: relative;
+            z-index: 1;
+            animation: floating 2s ease-in-out infinite;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 0 10px #1100ff, 0 0 20px #7700ff, 0 0 30px #ff00d9;
+        }
+
+        .neonText ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .neonText ul li::before {
+            content: "\2022";
+            color: #0d00ff;
+            font-size: 20px;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+       /* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #0011ff, #8401ff, #ff0077);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; /* Add this line */
+}
+
+.footer-logo {
+    display: block;
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 10px;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+        /* Retrowave Styles */
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 10px #0000c5, 0 0 20px #0000d9, 0 0 30px #1100ab;
+            }
+            50% {
+                text-shadow: 0 0 20px #1300be, 0 0 40px #0e01ff, 0 0 60px #0300c6;
+            }
+            100% {
+                text-shadow: 0 0 10px #3300ff, 0 0 20px #00078a, 0 0 30px #160092;
+            }
+        }
+
+        .neonText {
+            animation: neonGlow 1s ease-in-out infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+    
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+         /* Estilos CSS aqui */
+
+         .console {
+            margin-bottom: 40px;
+        }
+
+        .console h2 {
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 0 0 10px #450081;
+            animation: floating 2s ease-in-out infinite;
+        }
+
+        .console ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .console ul li {
+            color: #fff;
+            text-shadow: 0 0 5px #670094;
+            animation: floating 2s ease-in-out infinite;
+            margin-bottom: 5px;
+        }
+
+        .console ul li::before {
+            content: "\2022";
+            color: #78009c;
+            font-size: 20px;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .animatedBox {
+        position: relative;
+    }
+
+    .animatedBox::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Transparent wall */
+        z-index: -1;
+    }
+
+    .animatedBox ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        animation: floatingAnimation 3s ease-in-out infinite;
+    }
+
+    @keyframes floatingAnimation {
+        0% {
+            transform: translatey(-10px);
+        }
+        50% {
+            transform: translatey(10px);
+        }
+        100% {
+            transform: translatey(-10px);
+        }
+    }
+
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 5px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/nintendo/logo.png" alt="Nintendo" class="logo">
+    </header>
+
+
+    
+    <div class="console">
+        <img src="images/nintendo/snes1985.gif" alt="SNES 1985" style="width: 300px;">
+        <p class="neonText">Super Nintendo Entertainment System (SNES) lançado em 1985.</p>
+        <ul>
+            <li>Super Mario World</li>
+            <li>The Legend of Zelda: A Link to the Past</li>
+            <li>Super Metroid</li>
+            <li>Donkey Kong Country</li>
+            <li>Chrono Trigger</li>
+            <li>Street Fighter II</li>
+        </ul>
+    </div>
+    
+    <div class="console">
+        <img src="images/nintendo/super.gif" alt="Super Nintendo" style="width: 300px;">
+        <p class="neonText">Super Nintendo, um dos consoles de maior sucesso da Nintendo.</p>
+        <ul>
+            <li>Super Mario All-Stars</li>
+            <li>Super Mario Kart</li>
+            <li>Super Mario World 2: Yoshi's Island</li>
+            <li>The Legend of Zelda: A Link to the Past</li>
+            <li>Donkey Kong Country 2: Diddy's Kong Quest</li>
+            <li>Super Metroid</li>
+        </ul>
+    </div>
+    
+    <div class="console">
+        <img src="images/nintendo/dsi.gif" alt="Nintendo DSi" style="width: 300px;">
+        <p class="neonText">Nintendo DSi, um console portátil da Nintendo lançado em 2009.</p>
+        <ul>
+            <li>New Super Mario Bros.</li>
+            <li>Mario Kart DS</li>
+            <li>The Legend of Zelda: Phantom Hourglass</li>
+            <li>Pokémon HeartGold/SoulSilver</li>
+            <li>Professor Layton and the Curious Village</li>
+            <li>Animal Crossing: Wild World</li>
+        </ul>
+    </div>
+    
+    <div class="console">
+        <img src="images/nintendo/3ds.gif" alt="Nintendo 3DS" style="width: 300px;">
+        <p class="neonText">Nintendo 3DS, um console portátil com recursos 3D lançado em 2011.</p>
+        <ul>
+            <li>The Legend of Zelda: Ocarina of Time 3D</li>
+            <li>Pokémon X/Y</li>
+            <li>Super Mario 3D Land</li>
+            <li>Animal Crossing: New Leaf</li>
+            <li>Fire Emblem: Awakening</li>
+            <li>Monster Hunter 4 Ultimate</li>
+        </ul>
+    </div>
+    
+    <div class="console">
+        <img src="images/nintendo/switch.gif" alt="Nintendo Switch" style="width: 300px;">
+        <p class="neonText">Nintendo Switch, o console híbrido da Nintendo lançado em 2017.</p>
+        <ul>
+            <li>The Legend of Zelda: Breath of the Wild</li>
+            <li>Super Mario Odyssey</li>
+            <li>Animal Crossing: New Horizons</li>
+            <li>Pokémon Sword/Shield</li>
+            <li>Splatoon 2</li>
+            <li>Mario Kart 8 Deluxe</li>
+        </ul>
+    </div>
+    <a href="index.html" class="button">Voltar</a>
+</div>
+    <footer>
+        <img src="images/nintendo/logo.png" alt="Nintendo" class="logo">
+
+        <p>&copy; 2023 Nintendo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

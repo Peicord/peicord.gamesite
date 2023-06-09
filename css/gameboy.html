@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+     @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+       header {
+      background-image: url("images/gameboy/mario.gif");
+      font-family: 'Game Played', sans-serif;
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      animation: floatAnimation 3s ease-in-out infinite;
+      box-shadow: 0 0 10px #ff0000, 0 0 20px #0000ff;
+    }
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    body {
+    background-image: url("images/gameboy/back.gif");
+    background-size:110%;
+    background-repeat: repeat;
+    background-position: center;
+    color: #fff;
+    font-family: 'Game Played', sans-serif;
+    font-size: larger;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0; /* Add this line to remove default margin */
+    }
+ /* Footer styles */
+ footer {
+      background-image: url("images/gameboy/footer.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 20px;
+    }
+    /* Adjust the button styles within the footer */
+    footer button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff3b3b;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-family: 'Game Played', sans-serif;
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: floatButton 3s ease-in-out infinite;
+      box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0077, 0 0 30px #ff00bb;
+    }
+
+
+    /* Add floatButton animation for the button within the footer */
+    @keyframes floatButton {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      animation: floatText 3s ease-in-out infinite;
+      text-shadow: 0 0 10px #ff52a4, 0 0 20px #ff52a4, 0 0 30px #ff52a4;
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .gameboy-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff52a4;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 24px;
+      margin-top: 30px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: floatButton 3s ease-in-out infinite;
+      box-shadow: 0 0 10px #ff52a4, 0 0 20px #ff52a4, 0 0 30px #ff52a4;
+    }
+
+    @keyframes floatButton {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .gameboy-link:before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ff52a4;
+      transition: transform 0.3s ease-in-out;
+      z-index: -1;
+      animation: glowButton 2s ease-in-out infinite;
+    }
+
+    @keyframes glowButton {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .game-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .game-list-item {
+      margin: 20px;
+      width: 200px;
+    }
+
+    .game-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .game-name {
+      margin-top: 10px;
+      font-size: 24px;
+      animation: floatText 3s ease-in-out infinite;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ea00ff, 0 0 30px #3300ff;
+    }
+
+    .game-description {
+      margin-top: 5px;
+      font-size: 18px;
+      animation: floatText 3s ease-in-out infinite;
+      text-shadow: 0 0 10px #ff00fb, 0 0 20px #2b00ff, 0 0 30px #00bfff;
+    }
+    .game-compatibility {
+      margin-top: 5px;
+      font-size: 18px;
+      animation: floatText 3s ease-in-out infinite;
+      text-shadow: 0 0 10px #4400ff, 0 0 20px #00f2ff, 0 0 30px #00ff33;
+    }
+  </style>
+</head>
+<body>
+
+    <header></header>
+  
+    <ul class="game-list">
+        <li class="game-list-item">
+          <img class="game-image" src="images/gameboy/gameboy.gif" alt="Game 1">
+          <h2 class="game-name">GAMEBOY</h2>
+          <p class="game-description">O Gameboy original é o primeiro console de jogos portátil lançado pela Nintendo. Possui uma tela monocromática e é compatível com uma ampla variedade de jogos.</p>
+          <p class="game-compatibility"><strong>Jogos Compatíveis:</strong> Tetris, Super Mario Land, Pokémon Red/Blue, The Legend of Zelda: Link's Awakening, etc.</p>
+        </li>
+        <li class="game-list-item">
+          <img class="game-image" src="images/gameboy/pocket.gif" alt="Game 2">
+          <h2 class="game-name">GAMEBOY POCKET</h2>
+          <p class="game-description">O Gameboy Pocket é uma versão menor e mais leve do Gameboy original. Oferece uma vida útil da bateria aprimorada e um design mais compacto.</p>
+          <p class="game-compatibility"><strong>Jogos Compatíveis:</strong> Pokémon Gold/Silver, Donkey Kong Land, Kirby's Dream Land 2, Wario Land II, etc.</p>
+        </li>
+        <li class="game-list-item">
+          <img class="game-image" src="images/gameboy/advance.gif" alt="Game 3">
+          <h2 class="game-name">GAMEBOY ADVANCE</h2>
+          <p class="game-description">O Gameboy Advance é um console portátil de 32 bits com uma tela colorida e gráficos aprimorados. Oferece suporte à compatibilidade com jogos do Gameboy e Gameboy Color.</p>
+          <p class="game-compatibility"><strong>Jogos Compatíveis:</strong> Pokémon Ruby/Sapphire/Emerald, The Legend of Zelda: The Minish Cap, Mario Kart: Super Circuit, Metroid Fusion, etc.</p>
+        </li>
+        <li class="game-list-item">
+          <img class="game-image" src="images/gameboy/advanceSP.gif" alt="Game 4">
+          <h2 class="game-name">GAMEBOY ADVANCE SP</h2>
+          <p class="game-description">O Gameboy Advance SP é uma versão atualizada do Gameboy Advance, com um design dobrável e uma tela retroiluminada. Possui uma bateria recarregável e maior portabilidade.</p>
+          <p class="game-compatibility"><strong>Jogos Compatíveis:</strong> Pokémon FireRed/LeafGreen, The Legend of Zelda: A Link to the Past, Final Fantasy Tactics Advance, Mario & Luigi: Superstar Saga, etc.</p>
+        </li>
+      </ul>
+
+  <footer>
+    <button onclick="window.location.href = 'index.html'">Voltar</button>
+  </footer>
+
+  <script>
+    function redirectToPage(page) {
+      // Implement your redirection logic here
+      console.log('Redirecting to ' + page);
+    }
+  </script>
+
+</body>
+</html>

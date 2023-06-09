@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GameLand</title>
+    <meta name="keywords" content="Game Website" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Estilos personalizados para o botão */
+        .back-button {
+            background: linear-gradient(to right, blue, purple); /* Gradiente de ciano para roxo */
+            border: none; /* Remover borda padrão */
+            color: white; /* Cor do texto */
+            padding: 15px 25px; /* Espaçamento interno */
+            font-family: 'Game Played', sans-serif;
+            font-size: 20px; /* Tamanho da fonte */
+            border-radius: 5px; /* Borda arredondada */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+        }
+
+        /* Estilo personalizado para a seção de contatos */
+        .content_section {
+            background-color: transparent; /* Fundo transparente */
+            padding: 20px;
+            color: white; /* Texto branco */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra do texto */
+            position: relative; /* Posição relativa para a animação */
+        }
+
+        /* Estilo personalizado para o texto dos contatos */
+        .content_section li, .content_section a {
+            color: white; /* Texto branco */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra do texto */
+        }
+
+        /* Animação da borda */
+        @keyframes borderAnimation {
+            0% { border-width: 0; }
+            50% { border-width: 10px; }
+            100% { border-width: 0; }
+        }
+
+        /* Estilo da borda animada */
+        .content_section::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 0 solid white;
+            border-radius: 10px;
+            animation: borderAnimation 2s infinite;
+        }
+
+        /* Animação do fundo */
+        @keyframes backgroundAnimation {
+            0% { background-color: rgba(0, 0, 0, 0.2); }
+            50% { background-color: rgba(0, 0, 0, 0.5); }
+            100% { background-color: rgba(0, 0, 0, 0.2); }
+        }
+
+        /* Aplicar animação ao body */
+        body {
+            animation: backgroundAnimation 4s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="templatemo_content margin_right_10">
+
+        <div class="content_section">
+            <div class="header_02">Contatos</div>
+            <ul>
+                <li>Email: exemplo@gmail.com</li>
+                <li>Número de telefone: (00) 1234-5678</li>
+                <li>Redes Sociais:
+                    <ul>
+                        <li><a href="https://www.facebook.com/exemplo">Facebook</a></li>
+                        <li><a href="https://twitter.com/exemplo">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/exemplo">Instagram</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="margin_bottom_20"></div>
+        </div>
+
+        <div class="margin_bottom_40"></div>
+    </div> <!-- end of content -->
+
+    <img src="images/social.gif" width="450px">
+
+    <!-- Botão de voltar para a página inicial -->
+    <button class="back-button" onclick="window.location.href = 'index.html';">Voltar para a Página Inicial</button>
+
+</body>
+</html>

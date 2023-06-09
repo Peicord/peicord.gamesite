@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function redirectToPage(page) {
+          event.preventDefault(); // Prevent form submission
+          // Create a pop-up with the customized message
+          var popup = document.createElement('div');
+          popup.className = 'popup';
+          popup.innerHTML = '<div class="popup-content">Você já está no Início bobinho!<span class="close" onclick="closePopup()">&times;</span></div>';
+          document.body.appendChild(popup);
+        }
+
+        function closePopup() {
+          var popup = document.querySelector('.popup');
+          if (popup) {
+            popup.remove();
+          }
+        }
+    </script>
+    <style>
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .popup-content .close {
+            cursor: pointer;
+        }
+
+        /* Customized button styles */
+        .floating-button {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #00FFFF, #0000FF, #800080);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+            animation: floatingAnimation 3s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes floatingAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating text styles */
+        .floating-text {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            animation: floatingAnimation 3s ease-in-out infinite;
+        }
+
+        .rainbow-shadow {
+            animation: rainbowShadow 3s linear infinite;
+        }
+
+        @keyframes rainbowShadow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+            }
+            14% {
+                text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+            }
+            28% {
+                text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.8);
+            }
+            42% {
+                text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.8);
+            }
+            57% {
+                text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.8);
+            }
+            71% {
+                text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.8);
+            }
+            85% {
+                text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.8);
+            }
+            100% {
+                text-shadow: 2px 2px 4px rgba(0, 128, 0, 0.8);
+            }
+        }
+        .floating-button {
+        width: 300px;
+        height: 300px;
+
+        .floating-text {
+        font-size: 30px;
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GameLand</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Customized button -->
+    <a href="index.html" class="floating-button">
+        <div class="floating-text rainbow-shadow">
+            Você já estava no início bobinho!
+        </div>
+    </a>
+</body>
+</html>

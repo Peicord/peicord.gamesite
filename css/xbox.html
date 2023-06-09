@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CONSOLES</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+
+    body {
+      font-family: 'Game Played', sans-serif;
+      font-size: 18px;
+      background-image: url("images/xbox/back.gif");
+      background-repeat: repeat;
+      background-size: 100%;
+      background-position: center;
+      color: white;
+    }
+    .games ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .games ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      animation: fade-in 0.5s ease-in-out;
+    }
+
+    /* CSS animation for fade-in effect */
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* CSS styles for the image block */
+    .image-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* CSS styles for hover effect on image */
+    .xbox:hover .image-block {
+      opacity: 1;
+    }
+
+    .xbox {
+      position: relative;
+      display: inline-block;
+      margin: 30px;
+    }
+
+    .image-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #2a0b55, #04002d);
+      z-index: -1;
+      animation: moveBackground 10s infinite alternate;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes moveBackground {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10%);
+      }
+    }
+
+    .xbox img {
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .xbox .description {
+      background-color: rgba(41, 0, 40, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .xbox .games {
+      background-color: rgba(24, 0, 29, 0.7);
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .xbox .games ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline;
+    }
+
+    .xbox .games ul li {
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .floating-button {
+      font-family: 'Game Played', sans-serif;
+      font-size: 18px;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: linear-gradient(to bottom, #ff00e6, #0073ff);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      animation: floatingAnimation 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes rainbowAnimation {
+      0% {
+        color: #ff0000; /* Vermelho */
+      }
+      14% {
+        color: #ff7f00; /* Laranja */
+      }
+      28% {
+        color: #ffff00; /* Amarelo */
+      }
+      42% {
+        color: #00ff00; /* Verde */
+      }
+      57% {
+        color: #0000ff; /* Azul */
+      }
+      71% {
+        color: #2e2b5f; /* Índigo */
+      }
+      85% {
+        color: #8b00ff; /* Violeta */
+      }
+      100% {
+        color: #ff0000; /* Vermelho */
+      }
+    }
+
+    @keyframes floatingAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="xbox">
+    <div class="image-block"></div>
+    <img src="images/xbox/360.gif" width="660px" alt="Xbox">
+    <div class="description">Xbox 360</div>
+    <div class="games">
+      <ul>
+        <li>Halo 3</li>
+        <li>Gears of War</li>
+        <li>Mass Effect</li>
+        <li>Red Dead Redemption</li>
+        <li>BioShock</li>
+        <li>Call of Duty: Modern Warfare</li>
+        <li>Assassin's Creed II</li>
+        <li>The Elder Scrolls V: Skyrim</li>
+        <li>Grand Theft Auto V</li>
+        <li>Portal 2</li>
+        <li>Batman: Arkham City</li>
+        <li>Borderlands 2</li>
+        <li>Fallout 3</li>
+        <li>Left 4 Dead</li>
+        <li>Forza Motorsport 4</li>
+      </ul>
+    
+    </div>
+  </div>
+
+  <div class="xbox">
+    <div class="image-block"></div>
+    <img src="images/xbox/one.gif" alt="Xbox">
+    <div class="description">Xbox One</div>
+    <div class="games">
+      <ul>
+        <li>Halo 5: Guardians</li>
+        <li>Gears of War 4</li>
+        <li>Forza Horizon 4</li>
+        <li>Red Dead Redemption 2</li>
+        <li>Assassin's Creed Odyssey</li>
+        <li>The Witcher 3: Wild Hunt</li>
+        <li>Grand Theft Auto V</li>
+        <li>Destiny 2</li>
+        <li>Call of Duty: Modern Warfare</li>
+        <li>Sea of Thieves</li>
+        <li>Resident Evil 2 (2019)</li>
+        <li>Mortal Kombat 11</li>
+        <li>FIFA 20</li>
+        <li>Shadow of the Tomb Raider</li>
+        <li>Far Cry 5</li>
+      </ul>
+    
+    </div>
+  </div>
+
+  </div>
+
+  <button class="floating-button" onclick="window.location.href = 'index.html'">Voltar</button>
+</body>
+</html>

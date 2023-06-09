@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GameLand - PSP&reg;</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+         @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+        /* Add your custom styles here */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Game Played', sans-serif;
+            font-size: 20px; /* Tamanho da fonte */
+        }
+
+        #templatemo_content_wrapper {
+            background: linear-gradient(to right, #00ffff, #800080, #ff00ff);
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease-in-out infinite;
+            padding: 20px;
+            border-radius: 20px;
+            animation: fade-in 1s ease-out;
+        }
+
+        .header_02 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .content_section {
+            animation: fade-in 1s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .example_list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .example_list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            animation: slide-in 1s ease-out;
+        }
+
+        @keyframes slide-in {
+             0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .example_image {
+            width: 250px;
+            height: 250px;
+            margin-right: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .example_description {
+            flex: 1;
+            background: linear-gradient(to right, #00ffff, #800080, #ff00ff);
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease-in-out infinite;
+            padding: 20px;
+            border-radius: 10px;
+            animation: float-text 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes float-text {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #8d00c0;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+
+        .floating-button:hover {
+            background-color: #ff6b6b;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="templatemo_content_wrapper">
+        <div class="content_section">
+            <ul class="example_list">
+                <li>
+                    <img class="example_image" src="images/PSP/snes.gif" alt="psp">
+                    <div class="example_description">
+                        <h3>SNES</h3>
+                        <p>O Super Nintendo Entertainment System (SNES) é um console de videogame doméstico de 16 bits desenvolvido pela Nintendo.</p>
+                        <h4>Jogos Compatíveis:</h4>
+                        <ul>
+                            <li>Super Mario World</li>
+                            <li>The Legend of Zelda: A Link to the Past</li>
+                            <li>Super Metroid</li>
+                            <li>Donkey Kong Country</li>
+                            <li>Final Fantasy VI</li>
+                            <li>Chrono Trigger</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <img class="example_image" src="images/PSP/psp2.gif" alt="Example 2">
+                    <div class="example_description">
+                        <h3>SNES Portátil</h3>
+                        <p>O SNES Portátil é uma versão portátil do Super Nintendo Entertainment System, que permite jogar seus jogos favoritos do SNES em qualquer lugar.</p>
+                        <h4>Jogos Compatíveis:</h4>
+                        <ul>
+                            <li>Super Mario Kart</li>
+                            <li>Street Fighter II Turbo</li>
+                            <li>Secret of Mana</li>
+                            <li>Mega Man X</li>
+                            <li>Super Castlevania IV</li>
+                            <li>Star Fox</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <img class="example_image" src="images/PSP/other.gif" alt="Example 3">
+                    <div class="example_description">
+                        <h3>SNES 3000</h3>
+                        <p>O SNES 3000 é uma versão aprimorada do Super Nintendo Entertainment System, oferecendo gráficos aprimorados e recursos adicionais.</p>
+                        <h4>Jogos Compatíveis:</h4>
+                        <ul>
+                            <li>Earthbound</li>
+                            <li>Super Mario RPG: Legend of the Seven Stars</li>
+                            <li>Final Fantasy IV</li>
+                            <li>ActRaiser</li>
+                            <li>Contra III: The Alien Wars</li>
+                            <li>F-Zero</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+                </li>
+            </ul>
+        </div>
+        <a href="index.html" class="floating-button">Voltar</a>
+    </div>
+</body>
+</html>

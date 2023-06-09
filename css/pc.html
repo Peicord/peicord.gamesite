@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PC Games</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+        
+        body {
+            background: url(images/PC/pc_back.gif) no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Game Played', sans-serif;
+            font-size: 20px; /* Tamanho da fonte */
+            overflow-x: hidden; /* Para evitar barras de rolagem horizontais */
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #4a47a3, #42275a);
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+        
+        .example-block {
+            margin-top: 50px;
+            animation: slideUp 1s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .example-block img {
+            width: 300px;
+            height: 250px;
+            animation: scaleIn 1s ease;
+        }
+
+        .example-text {
+            margin-top: 10px;
+            font-size: 24px;
+            font-family: 'Game Played', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: moveText 5s ease infinite alternate;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-10px);
+            }
+        }
+
+        .game-list {
+            font-family: 'Game Played', sans-serif;
+            color: #fff;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideUp 1s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .game-list:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            background: url(images/PC/tv_pixel_animation.gif) center center;
+            z-index: -1;
+            animation: tvPixelAnimation 5s linear infinite;
+        }
+
+        
+    .game-list-item {
+        margin-bottom: 20px;
+        list-style-type: none;
+        text-shadow: 16px 16px 32px rgba(0, 0, 0, 0.5);
+    }
+        
+        .windows-list {
+            background-color: #834cb0;
+        }
+        
+        .mac-list {
+            background-color: #3e3ca2;
+        }
+        
+        .linux-list {
+            background-color: #983378;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+
+        /* Linhas que se movem */
+        .moving-lines {
+            position: absolute;
+            top: -30px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .moving-lines:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #fff);
+            animation: movingLines 0.5s linear infinite;
+        }
+        
+        .example-text {
+            margin-top: 10px;
+            font-size: 24px;
+            font-family: 'Game Played', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: rainbowText 5s ease infinite;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        @keyframes rainbowText {
+            0% {
+                background-image: linear-gradient(to right, rgb(255, 153, 0), rgb(255, 255, 0), rgb(0, 255, 4), rgb(0, 213, 255), rgb(208, 0, 255), indigo, rgb(255, 0, 0));
+                background-size: 200%;
+                background-position: 0%;
+            }
+            100% {
+                background-image: linear-gradient(to right, rgb(255, 0, 255), rgb(149, 0, 255), blue, rgb(0, 255, 0), yellow, orange, red);
+                background-size: 200%;
+                background-position: 100%;
+            }
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Sombra */
+        .shadow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.3);
+            filter: blur(30px);
+            z-index: -1;
+            animation: shadowFadeIn 1s ease;
+        }
+
+        @keyframes shadowFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slide-up */
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Scale-in */
+        @keyframes scaleIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* TV Pixel Animation */
+        @keyframes tvPixelAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="example-block">
+        <div class="moving-lines"></div>
+        <div class="shadow"></div>
+        <img src="images/PC/mac.gif" width="400" height="250" alt="Exemplo 1">
+        <p class="example-text text-center">MAC</p>
+        <div class="game-list mac-list">
+            <ul>
+                <li class="game-list-item">World of Warcraft</li>
+                <li class="game-list-item">Civilization VI</li>
+                <li class="game-list-item">Stardew Valley</li>
+                <li class="game-list-item">Hearthstone</li>
+                <li class="game-list-item">Among Us</li>
+                <li class="game-list-item">Celeste</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="example-block">
+        <div class="moving-lines"></div>
+        <div class="shadow"></div>
+        <img src="images/PC/windows.gif" width="400" height="250" alt="Exemplo 2">
+        <p class="example-text text-center">WINDOWS</p>
+        <div class="game-list windows-list">
+            <ul>
+                <li class="game-list-item">Fortnite</li>
+                <li class="game-list-item">Minecraft</li>
+                <li class="game-list-item">Grand Theft Auto V</li>
+                <li class="game-list-item">Overwatch</li>
+                <li class="game-list-item">The Witcher 3: Wild Hunt</li>
+                <li class="game-list-item">PlayerUnknown's Battlegrounds</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="example-block">
+        <div class="moving-lines"></div>
+        <div class="shadow"></div>
+        <img src="images/PC/pc.gif" width="250" height="200" alt="Exemplo 3">
+        <p class="example-text text-center">LINUX</p>
+        <div class="game-list linux-list">
+            <ul>
+                <li class="game-list-item">Dota 2</li>
+                <li class="game-list-item">Counter-Strike: Global Offensive</li>
+                <li class="game-list-item">Sid Meier's Civilization V</li>
+                <li class="game-list-item">Team Fortress 2</li>
+                <li class="game-list-item">Crusader Kings III</li>
+                <li class="game-list-item">Kerbal Space Program</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">
+            <img src="images/PC/left.gif" width="100" style="max-width: 100%; position: relative; top: 20px;">
+        </a>
+    </div>
+</div>
+</body>
+</html>

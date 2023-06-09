@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modern Game Website</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+    
+    body {
+      font-family: 'Game Played', sans-serif;
+      background-image: url(images/moderno/back.gif);
+      background-repeat: round;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-family: 'Game Played', sans-serif;
+      font-size: 36px;
+      margin: 0;
+      font-weight: normal;
+    }
+    
+    .game-list {
+  font-family: 'Game Played', sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.game-list li {
+  background-blend-mode: difference;
+  font-family: 'Game Played', sans-serif;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: white;
+  text-shadow: 0 0 15px rgb(0, 109, 182), 0 0 10px;
+  border: 1px solid rgb(0, 255, 242);
+  border-radius: 10px; /* Added rounded borders */
+  animation: glowing 4s ease-in-out infinite;
+}
+.game-list li:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes glowing {
+  0% {
+    border-color: rgb(0, 255, 242);
+    box-shadow: 0 0 5px rgba(0, 255, 242, 0.8), 0 0 10px rgba(0, 255, 242, 0.6);
+  }
+  50% {
+    border-color: rgb(0, 255, 242, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 242, 0.3), 0 0 30px rgba(0, 255, 242, 0.2);
+  }
+  100% {
+    border-color: rgb(0, 255, 242);
+    box-shadow: 0 0 5px rgba(0, 255, 242, 0.8), 0 0 10px rgba(0, 255, 242, 0.6);
+  }
+}
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    .button {
+      background-color: #ffffff;
+      font-family: 'Game Played', sans-serif;
+      border: none;
+      border-radius: 4px;
+      color: #000000;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 15px 35px;
+      text-decoration: overline;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: #00a2ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jogos Modernos</h1>
+  </header>
+
+  <div class="game-list">
+    <ul>
+      <li>Assassin's Creed Valhalla</li>
+      <li>Cyberpunk 2077</li>
+      <li>The Last of Us Part II</li>
+      <li>Red Dead Redemption 2</li>
+      <li>Ghost of Tsushima</li>
+      <li>Resident Evil Village</li>
+      <li>Hades</li>
+      <li>Final Fantasy VII Remake</li>
+      <li>Demon's Souls</li>
+      <li>God of War (2018)</li>
+      <p><img src="images/moderno/x.gif"width="15%"></p>
+      <li>Horizon Zero Dawn</li>
+      <li>Marvel's Spider-Man</li>
+      <li>Sekiro: Shadows Die Twice</li>
+      <li>Control</li>
+      <li>Death Stranding</li>
+      <li>DOOM Eternal</li>
+      <li>Monster Hunter: World</li>
+      <li>The Witcher 3: Wild Hunt</li>
+      <li>Star Wars Jedi: Fallen Order</li>
+      <li>Animal Crossing: New Horizons</li>
+      <p><img src="images/moderno/x1.gif"width="15%"></p>
+      <li>Call of Duty: Warzone</li>
+      <li>Among Us</li>
+      <li>Genshin Impact</li>
+      <li>Valorant</li>
+      <li>Fortnite</li>
+      <li>Minecraft</li>
+      <li>Apex Legends</li>
+      <li>Overwatch</li>
+      <li>Destiny 2</li>
+      <li>Fall Guys: Ultimate Knockout</li>
+      <li>Battlefield V</li>
+      <li>Resident Evil 3 (2020)</li>
+      <li>NBA 2K21</li>
+      <li>Final Fantasy XIV</li>
+      <li>Super Smash Bros. Ultimate</li>
+      <li>Assassin's Creed Odyssey</li>
+      <li>FIFA 21</li>
+      <li>PlayerUnknown's Battlegrounds (PUBG)</li>
+      <li>The Legend of Zelda: Breath of the Wild</li>
+      <li>Half-Life: Alyx</li>
+      <p><img src="images/moderno/x2.gif"width="15%"></p>
+    </ul>
+  </div>
+
+  <a href="index.html" class="button">Voltar</a>
+
+  <script>
+    document.querySelector('.button').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

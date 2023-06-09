@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+     @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+    body {
+      background-image: url("images/gameboy/back.gif");
+      background-size: 120%;
+      background-repeat: repeat;
+      background-position: center;
+      color: #fff;
+      font-family: 'Game Played', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    
+    /* Back button styles */
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #515dff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-family: 'Game Played', sans-serif;
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: floatButton 3s ease-in-out infinite;
+      box-shadow: 0 0 10px #006aff, 0 0 20px #3300ff, 0 0 30px #c300ff;
+    }
+
+    /* Add floatButton animation for the back button */
+    @keyframes floatButton {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .console-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+      transition: font-size 0.5s;
+      text-shadow: 0 0 10px blue, 0 0 10px red;
+    }
+
+    .console-image {
+      width: 200px;
+      height: auto;
+    }
+
+    .console-description {
+      font-size: 18px;
+      font-family: 'Game Played', sans-serif;
+      margin-top: 20px;
+      animation: floatText 3s ease-in-out infinite;
+      transition: font-size 0.5s;
+      text-shadow: 0 0 10px blue, 0 0 10px red;
+    }
+
+    /* Add floatText animation for the console description */
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    .console-description:hover {
+      font-size: 22px;
+      font-family: 'Game Played', sans-serif;
+      text-shadow: 0 0 10px blue, 0 0 10px red, 0 0 20px blue, 0 0 20px red;
+    }
+
+    .game-list {
+      font-family: 'Game Played', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+      transition: font-size 0.5s;
+      text-shadow: 0 0 10px blue, 0 0 10px red;
+    }
+
+    .game-list-item {
+      margin: 10px 0;
+      text-shadow: 0 0 10px blue, 0 0 10px purple;
+      animation: floatText 3s ease-in-out infinite;
+    }
+
+    .game-image {
+      width: 150px;
+      height: auto;
+    }
+
+    .game-title {
+      font-family: 'Game Played', sans-serif;
+      font-size: 18px;
+      margin-top: 10px;
+      transition: font-size 0.5s;
+      text-shadow: 0 0 10px blue, 0 0 10px red;
+    }
+  </style>
+</head>
+<body>
+  <div class="console-container">
+    <img class="console-image" src="images/wii/nintendoWii.gif" alt="Nintendo Wii">
+    <p class="console-description">O Nintendo Wii é um console de videogame doméstico lançado pela Nintendo. Ele introduziu um sistema de controle de movimento exclusivo que permitia aos jogadores interagir com os jogos usando gestos e movimentos. Com seu inovador Wii Remote controller e Nunchuk, o Wii trouxe um novo nível de interatividade para os jogos. Apresentava uma biblioteca diversificada de jogos, incluindo títulos populares como Wii Sports, Mario Kart Wii e The Legend of Zelda: Twilight Princess.</p>
+    <ul class="game-list">
+        <li class="game-list-item">Super Mario Galaxy</li>
+        <li class="game-list-item">The Legend of Zelda: Twilight Princess</li>
+        <li class="game-list-item">Mario Kart Wii</li>
+        <li class="game-list-item">Super Smash Bros. Brawl</li>
+        <li class="game-list-item">Wii Sports</li>
+        <li class="game-list-item">Wii Sports Resort</li>
+        <li class="game-list-item">Metroid Prime 3: Corruption</li>
+        <li class="game-list-item">Donkey Kong Country Returns</li>
+        <li class="game-list-item">Kirby's Epic Yarn</li>
+        <li class="game-list-item">New Super Mario Bros. Wii</li>
+        <li class="game-list-item">Mario Party 9</li>
+        <li class="game-list-item">Xenoblade Chronicles</li>
+        <li class="game-list-item">The Legend of Zelda: Skyward Sword</li>
+        <li class="game-list-item">Super Mario Galaxy 2</li>
+        <li class="game-list-item">Punch-Out!!</li>
+        <li class="game-list-item">Wii Fit</li>
+        <li class="game-list-item">Animal Crossing: City Folk</li>
+        <li class="game-list-item">Resident Evil 4: Wii Edition</li>
+        <li class="game-list-item">Donkey Kong Country: Tropical Freeze</li>
+        <li class="game-list-item">Super Paper Mario</li>
+    </ul>
+  </div>
+  <div class="console-container">
+    <img class="console-image" src="images/wii/wiiU.gif" alt="Nintendo Wii U">
+    <p class="console-description">O Nintendo Wii U é um sucessor do console Nintendo Wii. Ele introduziu um controlador semelhante a um tablet chamado Wii U GamePad, que apresentava uma tela sensível ao toque e oferecia possibilidades de jogo adicionais. O Wii U permitiu que os jogadores experimentassem os jogos tanto na tela da TV quanto no GamePad, proporcionando experiências de jogo únicas. Apresentava uma forte linha de títulos originais da Nintendo, como Super Mario 3D World, The Legend of Zelda: Breath of the Wild e Mario Kart 8.</p>
+    <ul class="game-list">
+        <li class="game-list-item">Super Mario 3D World</li>
+        <li class="game-list-item">The Legend of Zelda: Breath of the Wild</li>
+        <li class="game-list-item">Mario Kart 8</li>
+        <li class="game-list-item">Super Smash Bros. for Wii U</li>
+        <li class="game-list-item">Splatoon</li>
+        <li class="game-list-item">Donkey Kong Country: Tropical Freeze</li>
+        <li class="game-list-item">Bayonetta 2</li>
+        <li class="game-list-item">Pikmin 3</li>
+        <li class="game-list-item">Hyrule Warriors</li>
+        <li class="game-list-item">Super Mario Maker</li>
+        <li class="game-list-item">Xenoblade Chronicles X</li>
+        <li class="game-list-item">New Super Mario Bros. U</li>
+        <li class="game-list-item">Captain Toad: Treasure Tracker</li>
+        <li class="game-list-item">Yoshi's Woolly World</li>
+        <li class="game-list-item">The Wonderful 101</li>
+        <li class="game-list-item">Tokyo Mirage Sessions ♯FE</li>
+        <li class="game-list-item">Mario Party 10</li>
+        <li class="game-list-item">Kirby and the Rainbow Curse</li>
+        <li class="game-list-item">Nintendo Land</li>
+        <li class="game-list-item">ZombiU</li>
+    </ul>
+  </div>
+  <button class="back-button" onclick="window.location.href = 'index.html'">Voltar</button>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Games - GameLand</title>
+    <style>
+    @import url('https://fonts.cdnfonts.com/css/game-played-outline');
+    body {
+        animation: fadeIn 1s;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5em;
+        font-family: 'Game Played', sans-serif;
+        font-size: 12px;
+        color: #999;
+        background: url(images/GAMES/background2.gif) no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .product {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to bottom, #00c3ff, #7b00ff);
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items from top */
+        align-items: center;
+        padding: 10px;
+        color: #ffffff;
+        transition: transform 0.5s;
+    }
+
+    .product:hover {
+        transform: scale(1.1);
+    }
+
+    .product h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        background-color: rgba(51, 0, 255, 0.7);
+        padding: 5px;
+    }
+
+    .product p {
+        font-size: 16px;
+        margin-top: 10px;
+        background-color: rgba(34, 0, 255, 0.7);
+        padding: 5px;
+    }
+
+    .back-button {
+        background-color: #309bff;
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <a href="https://www.google.com/search?q=Zelda%3A+Tears+of+the+Kingdom" target="_blank">
+                <img src="images/GAMES/zelda.gif" alt="Zelda" style="width: 100%; height: 100%; object-fit: cover;">
+            </a>
+            <h2>Zelda: Tears of the Kingdom</h2>
+            <p>Jogo de ação-aventura desenvolvido e publicado pela Nintendo. Foi lançado em 12 de maio de 2023 para Nintendo Switch.</p>
+        </div>
+        <div class="product">
+            <a href="https://www.google.com/search?q=Final+Fantasy+XVI" target="_blank">
+                <img src="images/GAMES/final.gif" alt="Final Fantasy XVI" style="width: 100%; height: 95%; object-fit: cover; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            </a>
+            <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Final Fantasy XVI</h2>
+            <p style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                Jogo RPG de ação desenvolvido e publicado pela Square Enix. É o décimo sexto título principal da série Final Fantasy e está programado para ser lançado em 22 de junho de 2023 para PlayStation 5.
+            </p>
+        </div>
+
+        <div class="product">
+            <a href="https://www.google.com/search?q=Marvel%27s+Spider-Man+2" target="_blank">
+                <img src="images/GAMES/spider.gif" alt="Marvel's Spider-Man 2" style="width: 100%; height: 100%; object-fit:fill; margin-bottom: 5px;">
+            </a>
+            <h2>Marvel's Spider-Man 2</h2>
+            <p>Jogo de ação e aventura desenvolvido pela Insomniac Games e publicado pela Sony Interactive Entertainment. Data de lançamento inicial: 2023</p>
+        </div>
+        <div class="product">
+            <a href="https://www.google.com/search?q=Remake+de+Resident+Evil+4" target="_blank">
+                <img src="images/GAMES/resident.gif" alt="Remake de Resident Evil 4" style="width: 110%; height: 100%; object-fit: cover; margin-top: 40px;">
+            </a>
+            <h2>Remake de Resident Evil 4</h2>
+            <p>Jogo eletrônico de survival horror desenvolvido e publicado pela Capcom. É um remake de Resident Evil 4, lançado originalmente em 2005 para o Nintendo GameCube. Data de lançamento inicial: 23 de março de 2023</p>
+        </div>
+        <a href="index.html" class="back-button">voltar</a>
+    </div>
+</body>
+</html>
